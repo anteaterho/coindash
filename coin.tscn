@@ -57,7 +57,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_xd4xp"]
 radius = 21.0238
 
-[node name="Coin" type="Area2D" groups=["coins"]]
+[node name="Coin" type="Area2D"]
 script = ExtResource("1_28jsb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

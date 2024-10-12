@@ -5,7 +5,7 @@ signal start_game
 func update_score(value):
 	$MarginContainer/Score.text = str(value)
 	
-func update_timer(value):
+func update_time(value):
 	$MarginContainer/Time.text = str(value)
 
 func show_message(text):
@@ -14,7 +14,7 @@ func show_message(text):
 	$Timer.start()
 
 func _on_timer_timeout():
-	$Message.hide()
+	%Message.hide()
 	
 func _on_start_button_pressed():
 	$StartButton.hide()
@@ -25,7 +25,7 @@ func show_game_over():
 	show_message("Game Over")
 	await $Timer.timeout
 	$StartButton.show()
-	$Message.text = "Coin Dash!"
+	$Message.text - "Coin Dash!"
 	$Message.show()
 
 # Called when the node enters the scene tree for the first time.
