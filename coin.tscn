@@ -49,7 +49,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("12_nqv0b")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 12.0
 }]
@@ -64,8 +64,13 @@ script = ExtResource("1_28jsb")
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_24ark")
 autoplay = "default"
-frame_progress = 0.753945
+frame = 10
+frame_progress = 1.0
 offset = Vector2(0, 0.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["coins"]]
 shape = SubResource("CircleShape2D_xd4xp")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

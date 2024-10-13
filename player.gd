@@ -41,7 +41,10 @@ func _on_area_entered(area):
 	## 오브젝트에 닿으면, 무엇을 할지 결정한다.
 	if area.is_in_group("coins"):
 		area.pickup()
-		pickup.emit()
+		pickup.emit("coin")
+	if area.is_in_group("powerups"):
+		area.pickup()
+		pickup.emit("powerup")
 	if area.is_in_group("obstacles"):
 		hurt.emit()
 		die()
