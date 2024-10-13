@@ -75,7 +75,7 @@ size = Vector2(32, 44)
 script = ExtResource("1_uspba")
 metadata/_edit_lock_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["player"]]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_pinyf")
 animation = &"idle"
